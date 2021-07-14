@@ -1,0 +1,13 @@
+.home-section {
+    min-height: 100vh;
+    background-image: url(../img/Travler\ cover.png);
+    background-size: cover;
+    background-position: 50% 20%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .title {
+    position: relative;
+    top: 50vh;
+} */

@@ -1,0 +1,218 @@
+@keyframes linksSizeDown {
+    from {
+        font-size: 28px
+    } 
+    to {
+        font-size: 18px
+    }
+}
+
+@keyframes linksSizeUp {
+    from {
+        font-size: 18px
+    } 
+    to {
+        font-size: 28px
+    }
+}
+
+@keyframes titleSizeDown {
+    from {
+        font-size: 36px
+    } 
+    to {
+        font-size: 18px
+    }
+}
+
+@keyframes titleSizeUp {
+    from {
+        font-size: 18px
+    } 
+    to {
+        font-size: 36px
+    }
+}
+
+@keyframes heightDown {
+    from {
+        height: 75vh
+    } 
+    to {
+        height: 63.3px
+    }
+}
+
+@keyframes heightUp {
+    from {
+        height: 63.3px
+    } 
+    to {
+        height: 75vh
+    }
+}
+
+@keyframes backgroundToGray {
+    0% {
+        background: none;
+        box-shadow: 0 0 0 #000000;
+    }
+    80% {
+        background: none;
+        box-shadow: 0 0 0 #000000;
+    }
+    100% {
+        background: var(--main-gray);
+        box-shadow: 0 2px 15px #000000;
+    }
+}
+
+@keyframes backgroundToNone {
+    0% {
+        background: var(--main-gray);
+        box-shadow: 0 2px 15px #000000;
+    }
+    10% {
+        background: none;
+        box-shadow: 0 0 0 #000000;
+    }
+    100% {
+        background: none;
+        box-shadow: 0 0 0 #000000;
+    }
+}
+
+@keyframes brandToTop {
+    from {
+        top: 40vh;
+        font-size: 90px;
+    }
+    to {
+        top: 0;
+        font-size: 32px;
+    }
+}
+
+@keyframes brandToMiddle {
+    from {
+        top: 0;
+        font-size: 32px;
+    }
+    to {
+        top: 40vh;
+        font-size: 90px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 53px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0px 2px 8px black;
+    z-index: 5;
+
+    animation-fill-mode: forwards;
+
+    background-color: var(--main-gray);
+
+}
+/* .navbar-before {
+    animation: heightUp 1.5s, linksSizeUp 1.5s, backgroundToNone 1.5s;
+}
+.navbar-after {
+    background-color: var(--main-gray);
+    animation: heightDown 1.5s, linksSizeDown 1.5s, backgroundToGray 1.5s;
+    animation-fill-mode: forwards;
+} */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 14px;
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 10px 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-links li:hover {
+    background: var(--gray-active);
+}
+
+.nav-links-active {
+    background: var(--gray-active);
+}
+
+#brand {
+    font-family: 'Yellowtail', cursive;
+    width: fit-content;
+    color: var(--main-accent);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: all 1.5s;
+    animation-fill-mode: forwards;
+}
+.brand-before {
+    top: 35vh;
+    font-size: 90px;
+}
+.brand-after {
+    top: 3px;
+    font-size: 32px;
+}
+
+.title {
+    position: absolute;
+    top: 100%;
+    font-size: 36px;
+    font-weight: 400;
+    pointer-events: none;
+    color: black;
+}
+.title-before {
+    opacity: 1;
+    transition: opacity .3s;
+    transition-delay: 1.2s;
+}
+.title-after {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.media-to-left {
+    margin-right: 116px;
+
+    transition: margin-right 1.5s
+}
+.media-to-middle {
+    margin-right: 0;
+
+    transition: margin-right 1.5s
+}
+.quartet-to-right {
+    margin-left: 116px;
+    transition: margin-left 1.5s
+}
+.quartet-to-middle {
+    margin-left: 0;
+    transition: margin-left 1.5s
+}

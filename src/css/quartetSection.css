@@ -1,0 +1,11 @@
+#quartet {
+    text-align: center;
+}
+
+.quartet-bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+}
