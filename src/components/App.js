@@ -6,8 +6,6 @@ import MediaSection from "./MediaSection";
 import QuartetSection from "./QuartetSection";
 import Footer from "./Footer";
 
-import { Parallax } from 'react-parallax';
-
 function App() {
   return (
     <div className="App">
