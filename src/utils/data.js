@@ -1,4 +1,4 @@
-import louis from '../img/louis.jpeg';
+import alessi from '../img/alessi.png';
 import courtoisLogo from '../img/courtoisLogo.png';
 import UCLogo from '../img/CCMLogo.svg';
 
@@ -7,4 +7,40 @@ const daytonPhilLogo = 'https://daytonperformingarts.org/wp-content/themes/Newsp
 const daytonPhilSite = 'https://daytonperformingarts.org/';
 const courtoisSite = 'https://www.a-courtois.com/en/artist';
 
-export {louis, UCLogo, UCSite, daytonPhilLogo, daytonPhilSite, courtoisLogo, courtoisSite}
+const details = {
+    id: 1,
+    name: 'Travel\'r',
+    price: 20,
+    img: 'img/travlr.png',
+    desc: 'here\'s the description',
+    inCart: false,
+    count: 0,
+    total: 0
+}
+
+const products = [
+    {
+        id: 1,
+        name: 'Travel\'r',
+        price: 25,
+        img: 'img/travlr.png',
+        desc: 'here\'s the description here\'s the description here\'s the description here\'s the description',
+        inCart: false,
+        count: 1,
+        total: 0
+    },
+    {
+        id: 2,
+        name: 'Ex Libris',
+        price: 25,
+        img: 'img/travlr.png',
+        desc: 'here\'s the description here\'s the description here\'s the description here\'s the description here\'s the description',
+        inCart: false,
+        count: 1,
+        total: 0
+    },
+]
+
+const shipping = 6;
+
+export {alessi, UCLogo, UCSite, daytonPhilLogo, daytonPhilSite, courtoisLogo, courtoisSite, details, products, shipping}

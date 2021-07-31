@@ -1,7 +1,7 @@
 import React from 'react';
 import FormerStudentLeft from './AboutSection/FormerStudentLeft';
 import FormerStudentRight from './AboutSection/FormerStudentRight';
-import {louis} from '../utils/data';
+import {alessi} from '../utils/data';
 import { Link } from 'react-scroll';
 
 export default function QuartetSection() {
@@ -32,7 +32,7 @@ export default function QuartetSection() {
                 <h1 className="heading serif">Meet The Players</h1>
                 <FormerStudentLeft 
                     name={'Chad Arnow'} 
-                    pic={louis} 
+                    pic={'img/alessi.png'} 
                     href={'http://www.chadarnow.com/'} 
                     website={'www.chadarnow.com'}
                 >
@@ -40,7 +40,7 @@ export default function QuartetSection() {
                 </FormerStudentLeft>
                 <FormerStudentRight 
                     name={'Brett Shuster'} 
-                    pic={louis} 
+                    pic={'img/alessi.png'} 
                     href="https://louisville.edu/music/faculty-staff/Faculty/brett-shuster" 
                     website={'www.louisville.edu'}
                 >
@@ -48,7 +48,7 @@ export default function QuartetSection() {
                 </FormerStudentRight>
                 <FormerStudentLeft 
                     name={'Nathan Siler'} 
-                    pic={louis} 
+                    pic={'img/alessi.png'} 
                     href={'https://music.eku.edu/people/siler'} 
                     website={'www.music.eku.edu'}
                 >

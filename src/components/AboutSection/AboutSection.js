@@ -1,7 +1,7 @@
 import React from 'react';
 import FormerStudentLeft from './FormerStudentLeft';
 import FormerStudentRight from './FormerStudentRight';
-import {louis} from '../../utils/data';
+import {alessi} from '../../utils/data';
 
 export default function AboutSection() {
     const url = 'https://www.slidearea.com';
@@ -31,12 +31,12 @@ export default function AboutSection() {
             </div>
             <div className="former-students">
                 <h1 className="heading serif">Former Students</h1>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={louis} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={louis} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={louis} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={louis} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={louis} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={louis} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
+                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
+                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
+                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
+                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
+                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
+                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
             </div>
         </div>
     )

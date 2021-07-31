@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ProductContext } from './App';
 import { Link } from 'react-scroll';
+import bag from '../img/bag.svg'
 
 export default function Navbar() {
     const [scroll, setScroll] = useState(false);
@@ -8,7 +10,9 @@ export default function Navbar() {
         window.addEventListener('scroll', () => {
             setScroll(window.scrollY > 180);
         })
-    }, [])
+    }, [scroll])
+
+    const { handleCartToggle, cartLength } = useContext(ProductContext)
 
     return (
         <div className={scroll ? 'navbar navbar-after' : 'navbar navbar-before'}>
@@ -78,6 +82,10 @@ export default function Navbar() {
                         </Link>
                     </span>
                     <h2 className={scroll ? 'title serif title-after' : 'title serif title-before'}>Trombonist | Teacher</h2>
+            </div>
+            <div onClick={handleCartToggle} className="bag-container">
+                <p className="cart-number">{cartLength}</p>
+                <img src={bag} width="30px" height="30px" alt="shopping bag" />
             </div>
         </div>
     )

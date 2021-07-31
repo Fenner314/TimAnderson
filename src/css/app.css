@@ -5,6 +5,7 @@
 @import './quartetSection.css';
 @import './footer.css';
 @import './contact.css';
+@import './cart.css';
 
 :root {
     --main-gray: hsl(180, 2%, 16%);
@@ -13,11 +14,15 @@
     --main-brown: hsl(30, 12%, 27%);
     --main-white: rgb(230, 230, 230);
     --main-accent: hsl(105, 65%, 60%);
-    --accent-dark: hsl(105, 65%, 35%);
+    --accent-dark: hsl(105, 65%, 40%);
+    --accent-darker: hsl(105, 65%, 30%);
     --dim-gray: hsl(150, 1%, 39%);
     --cadet-grey: #93a3b1;
     --bistre-brown: #322214;
-    --raisin-black: hsl(280, 15%, 12%);
+    --opaque-dark: rgba(0, 0, 0, 0.7);
+    --opaque-darker: rgba(0, 0, 0, 0.85);
+    --main-red: rgb(255, 0, 0);
+    --dark-red: rgb(192, 0, 0);
 }
 
 * {
@@ -58,7 +63,7 @@ a {
 
 .section {
     background: var(--main-brown);
-    padding: 80px;
+    padding: 40px;
 }
 
 .mb-20 {

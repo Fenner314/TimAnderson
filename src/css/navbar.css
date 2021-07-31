@@ -216,3 +216,24 @@
     margin-left: 0;
     transition: margin-left 1.5s
 }
+
+.bag-container {
+    position: absolute;
+    right: 52px;
+    top: 12px;
+    cursor: pointer;
+}
+
+.cart-number {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: var(--accent-dark);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
