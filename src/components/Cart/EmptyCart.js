@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { ProductContext } from '../App';
+import React from 'react';
 
 export default function EmptyCart() {
     return (

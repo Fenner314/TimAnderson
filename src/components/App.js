@@ -31,7 +31,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    addTotals()
+    addTotals();
+    setShippingCost(shipping);
   }, [cart]);
 
   const getItem = (id) => {

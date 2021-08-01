@@ -32,7 +32,7 @@ export default function QuartetSection() {
                 <h1 className="heading serif">Meet The Players</h1>
                 <FormerStudentLeft 
                     name={'Chad Arnow'} 
-                    pic={'img/alessi.png'} 
+                    pic={alessi} 
                     href={'http://www.chadarnow.com/'} 
                     website={'www.chadarnow.com'}
                 >
@@ -40,7 +40,7 @@ export default function QuartetSection() {
                 </FormerStudentLeft>
                 <FormerStudentRight 
                     name={'Brett Shuster'} 
-                    pic={'img/alessi.png'} 
+                    pic={alessi} 
                     href="https://louisville.edu/music/faculty-staff/Faculty/brett-shuster" 
                     website={'www.louisville.edu'}
                 >
@@ -48,7 +48,7 @@ export default function QuartetSection() {
                 </FormerStudentRight>
                 <FormerStudentLeft 
                     name={'Nathan Siler'} 
-                    pic={'img/alessi.png'} 
+                    pic={alessi} 
                     href={'https://music.eku.edu/people/siler'} 
                     website={'www.music.eku.edu'}
                 >
