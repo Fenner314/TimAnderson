@@ -28,7 +28,7 @@ export default function QuartetSection() {
                     &nbsp; for more information.
                 </p>
             </div>
-            <div>
+            <div className="musician-container">
                 <h1 className="heading serif">Meet The Players</h1>
                 <FormerStudentLeft 
                     name={'Chad Arnow'} 

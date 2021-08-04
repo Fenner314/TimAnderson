@@ -25,6 +25,7 @@
     border: none;
     padding: 7px;
     background-color: rgb(226, 226, 226);
+    border-radius: 4px;
 }
 .input:focus {
     border: none;
@@ -71,7 +72,19 @@
 
     transition: all .1s
 }
-.contact-form button:hover,
-.contact-form button:focus {
-    background-color: var(--main-accent);
+
+@media only screen and (max-width: 756px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-message {
+        margin-bottom: 30px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        min-width: 250px;
+        width: 70vw;
+        max-width: 350px;
+    }
 }

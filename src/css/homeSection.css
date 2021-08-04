@@ -7,7 +7,8 @@
     justify-content: center;
 }
 
-/* .title {
-    position: relative;
-    top: 50vh;
-} */
+@media only screen and (max-width: 575px) {
+    .home-section {
+        min-height: 70vh;
+    }
+}

@@ -11,6 +11,9 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             backgroundColor: 'var(--accent-darker)',
             color: 'var(--main-white)',
+        },
+        '@media (max-width: 500px)' : {
+            marginTop: '20px',
         }
     },
     stepperBox: {
@@ -30,6 +33,7 @@ export default function Product(props) {
     const {
         id,
         name,
+        img,
         desc,
         price,
         count,
@@ -38,9 +42,9 @@ export default function Product(props) {
 
     return (
         <div className="product-card-container">
-            <div className="product-card">
+            <div className="product-card" style={{backgroundImage: `url(../${img})`}}>
                 {/* <img src="img/travlr.png" alt="cd cover" width="250px" height="250px" /> */}
-                <div className="card-info">
+                <div className="card-info" >
                     <h2>{name}</h2>
                     <p>${price}</p>
                     <p>{desc}</p>
@@ -50,7 +54,7 @@ export default function Product(props) {
                             <Button disabled className={classes.stepperBox}>{count}</Button>
                             <Button disabled={inCart} className={classes.stepperBox} onClick={() => qtyIncrement(id)} >+</Button>
                         </ButtonGroup>
-                        <Button variant="contained" disabled={inCart} className={classes.addButton} onClick={() => addToCart(id)}>
+                        <Button variant="contained" size="small" disabled={inCart} className={classes.addButton} onClick={() => addToCart(id)}>
                             {inCart ? 'Added To Cart' : 'Add To Cart'}
                         </Button>
                     </div>

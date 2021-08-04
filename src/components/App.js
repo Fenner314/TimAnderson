@@ -23,11 +23,12 @@ function App() {
   const [cartTax, setCartTax] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
   const [shippingCost, setShippingCost] = useState(shipping);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    return () => {
-      setCart([])
-    }
+    setTimeout(()=>{
+      setLoaded(true);
+     }, 500)
   }, []);
 
   useEffect(() => {
@@ -165,7 +166,7 @@ function App() {
 
   return (
     <ProductContext.Provider value={productContextValue}>
-      <div className="App">
+      <div className={loaded ? "App" : "App preload"}>
         <div className="site-container">
           <Navbar />
           <HomeSection />

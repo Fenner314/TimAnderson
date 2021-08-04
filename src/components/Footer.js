@@ -6,9 +6,9 @@ export default function Footer() {
     return (
         <div className="section" id="footer">
             <div className="affiliations">
-                <a href={UCSite} target="_blank" rel="noreferrer"><img src={UCLogo} alt="University of Cincinnati CCM logo" height="100px" /></a>
-                <a className="middle" href={daytonPhilSite} target="_blank" rel="noreferrer"><img src={daytonPhilLogo} alt="Dayton Philharmonic Orchestra Logo" height="70px" /></a>
-                <a href={courtoisSite} target="_blank" rel="noreferrer"><img src={courtoisLogo} alt="Courtois logo" height="100px" /></a>
+                <a href={UCSite} target="_blank" rel="noreferrer"><img className="logo" src={UCLogo} alt="University of Cincinnati CCM logo" height="100px" /></a>
+                <a className="middle" href={daytonPhilSite} target="_blank" rel="noreferrer"><img className="logo" src={daytonPhilLogo} alt="Dayton Philharmonic Orchestra Logo" height="70px" /></a>
+                <a href={courtoisSite} target="_blank" rel="noreferrer"><img className="logo" src={courtoisLogo} alt="Courtois logo" height="100px" /></a>
             </div>
             <Contact />
             <div className="social">

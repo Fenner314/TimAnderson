@@ -44,3 +44,16 @@
     align-content: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 855px) {
+    .student-container {
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        width: 70%;
+        min-width: 325px;
+        padding: 40px 20px;
+    }
+    .student {
+        grid-row: 1;
+    }
+}

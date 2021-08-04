@@ -1,26 +1,52 @@
-import React from 'react'
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+    sendButton: {
+        backgroundColor: 'var(--accent-dark)',
+        color: 'var(--main-white)',
+        '&:hover': {
+            backgroundColor: 'var(--accent-darker)',
+            color: 'var(--main-white)',
+        }
+    },
+}));
 
 export default function Contact() {
+    const classes = useStyles();
+
     return (
         <div className="contact-container">
             <div className="contact-half contact-message">
                 <h1 className="serif">Contact Me</h1>
                 <p>Want to book the Elysian Trombone Consort or myself for a masterclass or performance opportunity? Fill out this contact form to reach out to me and I'll get back to you as soon as I am able.</p>
             </div>
-            <form className="contact-half contact-form">
+            <form className="contact-half contact-form" action="https://formsubmit.co/jacobgfenner@yahoo.com" method="POST">
+                <input type="hidden" name="_subject" value="New message from website." />
+                <input type="text" name="_honey" style={{display: "none"}} />
+                <input type="hidden" name="_captcha" value="false" />
+                {/* <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input> */}
                 <div className="input-container">
-                    <input className="input" type="text" required />
+                    <input className="input" type="text" name="name" required />
                     <span className="floating-label">Name</span>
                 </div>
                 <div className="input-container">
-                    <input className="input" type="text" required />
+                    <input className="input" type="email" name="email" required />
                     <span className="floating-label">Email</span>
                 </div>
                 <div className="input-container">
-                    <textarea className="input" rows="5" cols="60" resize="false" required />
+                    <textarea className="input" name="message" rows="5" cols="60" resize="false" required />
                     <span className="floating-label">Message</span>
                 </div>
-                <button type="submit">Send</button>
+                {/* <button type="submit">Send</button> */}
+                <Button
+                    variant="contained"
+                    className={classes.sendButton}
+                    type="submit"
+                >
+                    Send
+                </Button>
             </form>
         </div>
     )

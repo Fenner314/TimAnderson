@@ -40,6 +40,7 @@ body {
     /* background-color: rgb(58, 52, 46); */
     color: var(--main-white);
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 .serif {
@@ -63,7 +64,7 @@ a {
 
 .section {
     background: var(--main-brown);
-    padding: 40px;
+    padding: 80px 30px;
 }
 
 .mb-20 {
@@ -80,3 +81,10 @@ a {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+   }

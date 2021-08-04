@@ -33,7 +33,7 @@ const products = [
         id: 2,
         name: 'Ex Libris',
         price: 25,
-        img: 'img/travlr.png',
+        img: 'img/ExLibrisCover.png',
         desc: 'here\'s the description here\'s the description here\'s the description here\'s the description here\'s the description',
         inCart: false,
         count: 1,

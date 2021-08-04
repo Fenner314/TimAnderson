@@ -60,7 +60,7 @@ export default function CartItem({ item, cart }) {
             <div className="col-10 my-1 mx-auto col-lg-2 d-flex justify-content-center align-items-center">
                 <div className="d-flex justify-content-center">
                     <div className="quantity-ctrl">
-                    <ButtonGroup size="small" className={classes.stepper} style={{ marginRight: '20px' }}>
+                    <ButtonGroup size="small" className={classes.stepper}>
                         <Button disabled={count <= 1} className={classes.stepperBox} onClick={() => decrement(id)} >-</Button>
                         <Button disabled className={classes.stepperBox}>{count}</Button>
                         <Button className={classes.stepperBox} onClick={() => increment(id)} >+</Button>
