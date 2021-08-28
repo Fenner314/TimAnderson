@@ -1,4 +1,6 @@
 import alessi from '../img/alessi.png';
+import TimImageBio from '../img/TimLookingRightNarrow.jpg';
+import TimParallax from '../img/TimSitting.jpg';
 import courtoisLogo from '../img/courtoisLogo.png';
 import UCLogo from '../img/CCMLogo.svg';
 
@@ -43,4 +45,4 @@ const products = [
 
 const shipping = 6;
 
-export {alessi, UCLogo, UCSite, daytonPhilLogo, daytonPhilSite, courtoisLogo, courtoisSite, details, products, shipping}
+export {alessi, TimImageBio, TimParallax, UCLogo, UCSite, daytonPhilLogo, daytonPhilSite, courtoisLogo, courtoisSite, details, products, shipping}

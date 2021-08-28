@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles } from '@material-ui/core/styles';
 // import Button from '../Button';
-// import PaypalButton from './PaypalButton';
+import PaypalButton from './PaypalButton';
 
 const useStyles = makeStyles(theme => ({
     clearButton: {
@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function CartTotals(props) {
     const classes = useStyles();
+    const {history} = props;
 
     const { cartSubTotal, cartTax, cartTotal, clearCart } = useContext(ProductContext);
 
@@ -51,17 +52,17 @@ export default function CartTotals(props) {
                         </span>
                         <strong>$6.00</strong>
                     </h5>
-                    <h5 className="text-title">
+                    <h5 className="text-title" style={{marginBottom: '10px'}}>
                         <span>
                             Total:&nbsp;
                         </span>
                         <strong>${cartTotal}</strong>
                     </h5>
-                    {/* <PaypalButton 
+                    <PaypalButton 
                         total={cartTotal} 
                         clearCart={clearCart} 
-                        history={history} 
-                    /> */}
+                        history={history}
+                    />
                 </div>
             </div>
         </div>

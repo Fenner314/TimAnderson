@@ -1,7 +1,7 @@
 import React from 'react';
 import FormerStudentLeft from './FormerStudentLeft';
 import FormerStudentRight from './FormerStudentRight';
-import {alessi} from '../../utils/data';
+import { alessi, TimImageBio } from '../../utils/data';
 
 export default function AboutSection() {
     const url = 'https://www.slidearea.com';
@@ -10,6 +10,7 @@ export default function AboutSection() {
         <div className="about-section section" id="about">
             <div className="bio">
                 <h1 className="heading serif">Biography</h1>
+                <img src={TimImageBio} width= "300px" className="bio-img" alt="Timothy Anderson holding a trombone" />
                 <p className="text-block">
                     Timothy Anderson is Associate Professor of Trombone at the College-Conservatory of Music, University of Cincinnati (CCM), a position he has held since 2006.  Teaching duties include Applied Lessons, Chamber Music, Excerpt Class, Studio Class, Trombone Choir, and other related trombone topics.  
                 </p>
@@ -29,7 +30,7 @@ export default function AboutSection() {
                     Professional appearances include Ohio Music Educator’s Conference, American Trombone Workshop, International Trombone Festival, College Music Society, and the International Women’s Brass Conference.  He has given several recital and masterclass tours and presented at colleges and universities around the country.
                 </p>
             </div>
-            <div className="musician-container">
+            <div className="musician-container pb-0">
                 <h1 className="heading serif">Former Students</h1>
                 <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
                 <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>

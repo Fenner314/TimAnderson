@@ -71,3 +71,7 @@
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+.paypal-button-tagline {
+    color: white !important;
+}

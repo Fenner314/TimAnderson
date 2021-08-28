@@ -58,7 +58,7 @@ export default function Navbar() {
                     to="about" 
                     smooth={true} 
                     offset={-49} 
-                    duration={3000} 
+                    duration={800} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
                     onClick={menu ? handleMenuClick : null}
@@ -71,7 +71,7 @@ export default function Navbar() {
                     to="media" 
                     smooth={true} 
                     offset={-49} 
-                    duration={3000} 
+                    duration={800} 
                     className={scroll && !menu ? 'media-to-left' : 'media-to-middle'} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
@@ -85,7 +85,7 @@ export default function Navbar() {
                     to="quartet" 
                     smooth={true} 
                     offset={-49} 
-                    duration={3000} 
+                    duration={800} 
                     className={scroll && !menu ? 'quartet-to-right' : 'quartet-to-middle'} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
@@ -99,7 +99,7 @@ export default function Navbar() {
                     to="footer" 
                     smooth={true} 
                     offset={-49} 
-                    duration={3000} 
+                    duration={800} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
                     onClick={menu ? handleMenuClick : null}
@@ -116,7 +116,7 @@ export default function Navbar() {
                             to="home"     
                             smooth={true}   
                             offset={-49}  
-                            duration={3000}  
+                            duration={800}  
                             spy={true}
                         >
                             Timothy Anderson

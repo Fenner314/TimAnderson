@@ -134,10 +134,10 @@ function App() {
     const tempTax = subTotal * .065;
     const tax = parseFloat(tempTax); 
     const tempTotal = subTotal + tax + shippingCost;
-    const total = tempTotal.toFixed(2);
+    const total = parseFloat(tempTotal.toFixed(2));
     
     setCartSubTotal(subTotal);
-    setCartTax(tax.toFixed(2));
+    setCartTax(parseFloat(tax.toFixed(2)));
     setCartTotal(total);
   }
 

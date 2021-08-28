@@ -14,7 +14,7 @@ export default function CartAdded() {
         <>
             <div className={cartAddedOpen ? "cart-added-container" : "invisible"}>
                 <div className="cart-added-message">
-                    <i class="fas fa-check-circle fa-lg"></i>
+                    <i className="fas fa-check-circle fa-lg"></i>
                     <p>Item successfully added to cart!</p>
                 </div>
                 <div className="cart-added-buttons">

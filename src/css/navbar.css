@@ -250,7 +250,6 @@
     transform: translateX(-50%);
 
     transition: all 1.5s;
-    animation-fill-mode: forwards;
 }
 .brand-before {
     top: 35vh;
@@ -267,7 +266,7 @@
     font-size: 36px;
     font-weight: 400;
     pointer-events: none;
-    color: black;
+    color: var(--main-white);
 }
 .title-before {
     opacity: 1;
