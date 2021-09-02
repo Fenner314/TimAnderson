@@ -40,16 +40,6 @@ export default function Product({ product }) {
         })
     }, [commerceCart])
 
-    // const {
-    //     id,
-    //     name,
-    //     img,
-    //     desc,
-    //     price,
-    //     count,
-    //     inCart
-    // } = props.product;
-
     const handleToggleButton = () => {
         setInCart(!inCart)
     }
@@ -57,7 +47,6 @@ export default function Product({ product }) {
     return (
         <div className="product-card-container">
             <div className="product-card" style={{backgroundImage: `url(${product.media.source})`}}>
-                {/* <img src="img/travlr.png" alt="cd cover" width="250px" height="250px" /> */}
                 <div className="card-info" >
                     <h2>{product.name}</h2>
                     <p>${product.price.formatted}</p>

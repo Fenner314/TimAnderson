@@ -1,21 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles(theme => ({
-    sendButton: {
-        backgroundColor: 'var(--accent-dark)',
-        color: 'var(--main-white)',
-        '&:hover': {
-            backgroundColor: 'var(--accent-darker)',
-            color: 'var(--main-white)',
-        }
-    },
-}));
-
-const handleSubmit = () => {
-    console.log('submitted baby woo')
-}
+import useStyles from './CheckoutFlow/styles';
 
 export default function Contact() {
     const classes = useStyles();
@@ -26,7 +11,7 @@ export default function Contact() {
                 <h1 className="serif">Contact Me</h1>
                 <p>Want to book the Elysian Trombone Consort or myself for a masterclass or performance opportunity? Fill out this contact form to reach out to me and I'll get back to you as soon as I am able.</p>
             </div>
-            <form className="contact-half contact-form" onSubmit={handleSubmit} action="https://formsubmit.co/jacobgfenner@yahoo.com" method="POST">
+            <form className="contact-half contact-form" action="https://formsubmit.co/jacobgfenner@yahoo.com" method="POST">
                 <input type="hidden" name="_subject" value="New message from website." />
                 <input type="text" name="_honey" style={{display: "none"}} />
                 <input type="hidden" name="_captcha" value="false" />

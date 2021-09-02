@@ -63,5 +63,13 @@ export default makeStyles((theme) => ({
       '&:hover': {
           backgroundColor: 'hsla(105, 65%, 40%, .1)'
       }
-  }
+  },
+  sendButton: {
+    backgroundColor: 'var(--accent-dark)',
+    color: 'var(--main-white)',
+    '&:hover': {
+        backgroundColor: 'var(--accent-darker)',
+        color: 'var(--main-white)',
+    }
+},
 }));

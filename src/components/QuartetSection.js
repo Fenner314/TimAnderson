@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Parallax, Background } from 'react-parallax';
 import FormerStudentLeft from './AboutSection/FormerStudentLeft';
 import FormerStudentRight from './AboutSection/FormerStudentRight';
-import { chad, brett, nathan, TimParallax } from '../utils/data';
+import { alessi, chad, brett, nathan, TimParallax } from '../utils/data';
 import { Link } from 'react-scroll';
 
 export default function QuartetSection() {

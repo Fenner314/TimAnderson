@@ -11,6 +11,8 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [noTrans, setNoTrans] = useState(false);
 
+    const { handleCartToggle, commerceCart } = useContext(AppContext);
+    
     useEffect(() => {
         window.addEventListener('scroll', () => {
             setScroll(window.scrollY > 180);
@@ -32,8 +34,6 @@ export default function Navbar() {
         setMenu(window.innerWidth <= 925 ? true : false);
         setMenuOpen(false);
     }, []);
-
-    const { handleCartToggle, commerceCart } = useContext(AppContext);
 
     const handleMenuClick = () => {
         menuOpen ? setMenuOpen(false) : setMenuOpen(true)
@@ -126,9 +126,8 @@ export default function Navbar() {
             </div>
             <div className="right-links">
                 <CartLink to="/cart">
-                    <div onClick={handleCartToggle} className="bag-container">
+                    <div className="bag-container">
                         <p className="cart-number">{commerceCart.total_items}</p>
-                        {/* <p className="cart-number">{cartLength}</p> */}
                         <img src={bag} width="30px" height="30px" alt="shopping bag" />
                     </div>
                 </CartLink>

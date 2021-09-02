@@ -9,13 +9,10 @@ export default function Context(props) {
     const [productDetails, setProductDetails] = useState(details);
     const [detailsOpen, setDetailsOpen] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
-    const [cart, setCart] = useState([]);
     const [commerceCart, setCommerceCart] = useState({});
     const [order, setOrder] = useState({});
     const [errorMessage, setErrorMessage] = useState('');
-    const [cartLength, setCartLength] = useState(0);
     const [cartSubTotal, setCartSubTotal] = useState(0);
-    const [cartTax, setCartTax] = useState(0);
     const [cartTotal, setCartTotal] = useState(0);
     const [shippingCost, setShippingCost] = useState(shipping);
     const [loaded, setLoaded] = useState(false);
@@ -75,14 +72,7 @@ export default function Context(props) {
       }
     
       const addCartTotal = (subTotal) => {
-        // const tempTax = subTotal * .065;
-        // const tax = parseFloat(tempTax); 
         const tempTotal = subTotal + shippingCost;
-        // const tempTotal = subTotal + tax + shippingCost;
-        // const total = parseFloat(tempTotal.toFixed(2));
-        
-        // setCartSubTotal(subTotal);
-        // setCartTax(parseFloat(tax.toFixed(2)));
         setCartTotal(tempTotal.toFixed(2));
       }
     
@@ -112,9 +102,6 @@ export default function Context(props) {
         }
         const price = product.price;
         product.total = price;
-        setCartLength(cartLength + product.count);
-    
-        setCart([...cart, product]);
       }
     
       const increment = (id) => {
@@ -122,8 +109,6 @@ export default function Context(props) {
     
         product.count += 1;
         product.total = product.count * product.price;
-        setCartLength(cartLength + 1);
-        setCart([...cart]);
       }
     
       const decrement = (id) => {
@@ -131,8 +116,6 @@ export default function Context(props) {
     
         product.count -= 1;
         product.total = product.count * product.price;
-        setCartLength(cartLength - 1);
-        setCart([...cart]);
       }
     
       const qtyIncrement = (id) => {
@@ -140,7 +123,6 @@ export default function Context(props) {
     
         product.count += 1;
         product.total = product.count * product.price;
-        setCart([...cart]);
       }
     
       const qtyDecrement = (id) => {
@@ -148,39 +130,22 @@ export default function Context(props) {
     
         product.count -= 1;
         product.total = product.count * product.price;
-        setCart([...cart]);
       }
     
       const removeItem = (id) => {
         let tempProducts = [...products];
-        let tempCart = [...cart];
-    
-        tempCart = tempCart.filter(item => item.id !== id);
-    
         const index = tempProducts.indexOf(getItem(id));
         let removedProduct = tempProducts[index];
         removedProduct.inCart = false;
-        setCartLength(cartLength - removedProduct.count);
         removedProduct.count = 1;
         removedProduct.total = 0;
     
-        setCart([...tempCart]);
         setMediaProducts([...tempProducts]);
       }
-    
-        const clearCart = () => {
-        cart.forEach(item => {
-          item.inCart = false;
-          item.count = 0;
-          item.total = 0;
-        });
-        setCart([]);
-        setCartLength(0);
-      }
-    
+        
       const addTotals = () => {
         let subTotal = 0;
-        cart.map(item => (subTotal += (item.price * item.count)));
+        // cart.map(item => (subTotal += (item.price * item.count)));
         // const tempTax = subTotal * .065;
         // const tax = parseFloat(tempTax); 
         const tempTotal = subTotal + shippingCost;
@@ -201,20 +166,14 @@ export default function Context(props) {
         setDetailsOpen,
         cartOpen,
         setCartOpen,
-        cart,
-        setCart,
         commerceCart,
         setCommerceCart,
         order,
         setOrder,
         errorMessage,
         setErrorMessage,
-        cartLength,
-        setCartLength,
         cartSubTotal,
         setCartSubTotal,
-        cartTax,
-        setCartTax,
         cartTotal,
         setCartTotal,
         shippingCost,
@@ -242,48 +201,7 @@ export default function Context(props) {
         qtyIncrement,
         qtyDecrement,
         removeItem,
-        clearCart,
         addTotals,
-        // order,
-
-        // errorMessage,
-
-
-
-        // mediaProducts,
-        // productDetails,
-        // cartOpen,
-        // cart,
-        // cartLength,
-        // cartSubTotal,
-        // cartTax,
-        // cartTotal,
-        //new values for commerce.js
-        // items,
-        // commerceCart,
-        // handleAddToCart,
-        // handleUpdateCartQuantity,
-        // handleRemoveFromCart,
-        // handleEmptyCart,
-        // addCartTotal,
-        // order,
-        // handleCaptureCheckout,
-        // errorMessage,
-        // fetchItems,
-        // fetchCart,
-    
-        // getItem,
-        // handleDetail,
-        // handleDetailsToggle,
-        // handleCartToggle,
-        // addToCart,
-        // increment,
-        // decrement,
-        // qtyIncrement,
-        // qtyDecrement,
-        // removeItem,
-        // clearCart,
-        // addTotals
     }
     
     return (

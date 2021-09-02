@@ -9,14 +9,10 @@ import QuartetSection from "./QuartetSection";
 import Footer from "./Footer";
 import Cart from "./Cart/Cart";
 import Checkout from './CheckoutFlow/Checkout';
-
-import { shipping } from '../utils/data';
 import { AppContext } from '../utils/context';
 
-export const ProductContext = React.createContext();
-
 function App() {
-  const { loaded, setLoaded, setShippingCost, fetchItems, fetchCart, addTotals, cart } = useContext(AppContext)
+  const { loaded, setLoaded, fetchCart, fetchItems } = useContext(AppContext)
 
   useEffect(() => {   
     fetchItems();
@@ -29,29 +25,24 @@ function App() {
     }, 500);
   }, []);
 
-  useEffect(() => {
-    addTotals();
-    setShippingCost(shipping);
-  }, [cart]);
-
 
   return (
-    <div className={loaded ? "App" : "App preload"}>
-      <div className="site-container">
-        <Switch>
-          <Route exact path="/">
-            <Navbar />
-            <HomeSection />
-            <AboutSection />
-            <MediaSection />
-            <QuartetSection />
-            <Footer />
-          </Route>
-          <Route path="/cart" component={Cart} />
-          <Route path="/checkout" component={Checkout} />
-        </Switch>
+      <div className={loaded ? "App" : "App preload"}>
+        <div className="site-container">
+          <Switch>
+            <Route exact path="/">
+              <Navbar />
+              <HomeSection />
+              <AboutSection />
+              <MediaSection />
+              <QuartetSection />
+              <Footer />
+            </Route>
+            <Route path="/cart" component={Cart} />
+            <Route path="/checkout" component={Checkout} />
+          </Switch>
+        </div>
       </div>
-    </div>
   );
 }
 

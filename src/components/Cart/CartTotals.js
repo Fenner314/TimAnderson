@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function CartTotals(props) {
     const classes = useStyles();
+    // const {history} = props;
 
     const { cartTotal, commerceCart, addCartTotal, handleEmptyCart } = useContext(AppContext);
 

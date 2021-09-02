@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function CartItem({ item, cart }) {
+export default function CartItem({ item, cart,}) {
     const classes = useStyles();
 
     const { 

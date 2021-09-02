@@ -6,6 +6,7 @@ import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import { Link, useHistory } from 'react-router-dom';
 import { AppContext } from '../../utils/context';
+// import { useHistory } from 'react-router';
 
 const steps = ['Shipping address', 'Payment details']
 

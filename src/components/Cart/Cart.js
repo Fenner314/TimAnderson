@@ -10,8 +10,7 @@ import useStyles from '../CheckoutFlow/styles';
 import { AppContext } from '../../utils/context';
 
 export default function Cart(props) { 
-    const { cart, commerceCart } = useContext(AppContext);
-    // const { cart, cartOpen, handleCartToggle, commerceCart } = useContext(ProductContext);
+    const { commerceCart } = useContext(AppContext);
 
     const classes = useStyles();
     
@@ -20,10 +19,10 @@ export default function Cart(props) {
             <div className={"cart-container"}>
                 <h1 className="cart-title heading serif">Your Cart</h1>
                 <CartColumns />
-                <CartList cart={cart} commerceCart={commerceCart} />
-                <CartTotals cart={cart} history={props.history} />
+                <CartList commerceCart={commerceCart} />
+                <CartTotals history={props.history} />
                 <Link to="/">
-                    <p className="close-cart">Back to site</p>
+                    <Button className={classes.buttonBack} variant="outlined">Back to site</Button>
                 </Link>
             </div>
         )
@@ -33,7 +32,6 @@ export default function Cart(props) {
             <EmptyCart />
             <Link to="/">
                 <Button className={classes.buttonBack} variant="outlined">Back to site</Button>
-                {/* <p className="close-cart">Back to site</p> */}
             </Link>
         </div>
     )
