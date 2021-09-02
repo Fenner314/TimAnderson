@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
@@ -25,38 +25,55 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function Product(props) {
+export default function Product({ product }) {
+    const [inCart, setInCart] = useState(false);
+
     const classes = useStyles();
 
-    const { addToCart, qtyDecrement, qtyIncrement } = useContext(ProductContext);
+    const { addToCart, qtyDecrement, qtyIncrement, handleAddToCart, commerceCart } = useContext(ProductContext);
 
-    const {
-        id,
-        name,
-        img,
-        desc,
-        price,
-        count,
-        inCart
-    } = props.product;
+    useEffect(() => {
+        commerceCart.line_items.map((item) => {
+        if (item.product_id === product.id) {
+            setInCart(true)
+        }
+        })
+    }, [commerceCart])
+
+    // const {
+    //     id,
+    //     name,
+    //     img,
+    //     desc,
+    //     price,
+    //     count,
+    //     inCart
+    // } = props.product;
+
+    const handleToggleButton = () => {
+        setInCart(!inCart)
+    }
 
     return (
         <div className="product-card-container">
-            <div className="product-card" style={{backgroundImage: `url(../${img})`}}>
+            <div className="product-card" style={{backgroundImage: `url(${product.media.source})`}}>
                 {/* <img src="img/travlr.png" alt="cd cover" width="250px" height="250px" /> */}
                 <div className="card-info" >
-                    <h2>{name}</h2>
-                    <p>${price}</p>
-                    <p>{desc}</p>
+                    <h2>{product.name}</h2>
+                    <p>${product.price.formatted}</p>
+                    <p dangerouslySetInnerHTML={{__html: product.description}} />
                     <div className="add-container">
-                        <ButtonGroup size="small" className={classes.stepper} style={{ marginRight: '20px' }}>
-                            <Button disabled={count <= 1 || inCart} className={classes.stepperBox} onClick={() => qtyDecrement(id)} >-</Button>
+                        <ButtonGroup size="small" className={classes.stepper}>
+                            {/* <Button disabled={count <= 1 || inCart} className={classes.stepperBox} onClick={() => qtyDecrement(key)} >-</Button>
                             <Button disabled className={classes.stepperBox}>{count}</Button>
-                            <Button disabled={inCart} className={classes.stepperBox} onClick={() => qtyIncrement(id)} >+</Button>
+                            <Button disabled={inCart} className={classes.stepperBox} onClick={() => qtyIncrement(key)} >+</Button> */}
                         </ButtonGroup>
-                        <Button variant="contained" size="small" disabled={inCart} className={classes.addButton} onClick={() => addToCart(id)}>
+                        <Button variant="contained" size="small" disabled={inCart} className={classes.addButton} onClick={() => {handleToggleButton(); handleAddToCart(product.id, 1)}}>
                             {inCart ? 'Added To Cart' : 'Add To Cart'}
                         </Button>
+                        {/* <Button variant="contained" size="small" disabled={inCart} className={classes.addButton} onClick={() => addToCart(key)}>
+                            {inCart ? 'Added To Cart' : 'Add To Cart'}
+                        </Button> */}
                     </div>
                 </div>
             </div>

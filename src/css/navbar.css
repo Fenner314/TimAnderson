@@ -249,7 +249,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    transition: all 1.5s;
+    transition: all 1.2s;
 }
 .brand-before {
     top: 35vh;
@@ -281,20 +281,20 @@
 .media-to-left {
     margin-right: 116px;
 
-    transition: margin-right 1.5s
+    transition: margin-right 1.2s
 }
 .media-to-middle {
     margin-right: 0;
 
-    transition: margin-right 1.5s
+    transition: margin-right 1.2s
 }
 .quartet-to-right {
     margin-left: 116px;
-    transition: margin-left 1.5s
+    transition: margin-left 1.2s
 }
 .quartet-to-middle {
     margin-left: 0;
-    transition: margin-left 1.5s
+    transition: margin-left 1.2s
 }
 
 .right-links {

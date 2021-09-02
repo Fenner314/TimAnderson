@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import cx from 'classnames';
 import { ProductContext } from './App';
+import { Link as CartLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import bag from '../img/bag.svg'
 
@@ -32,7 +33,7 @@ export default function Navbar() {
         setMenuOpen(false);
     }, []);
 
-    const { handleCartToggle, cartLength } = useContext(ProductContext);
+    const { handleCartToggle, cartLength, commerceCart } = useContext(ProductContext);
 
     const handleMenuClick = () => {
         menuOpen ? setMenuOpen(false) : setMenuOpen(true)
@@ -48,7 +49,6 @@ export default function Navbar() {
                 menu ? "nav-links-menu serif" : "nav-links serif",
                 menu && !menuOpen ? "translate-100" : "translate-0"
             )}>
-                {/* {menu ? <i id="navbar-close" className="fas fa-times fa-2x menu-close" onClick={handleMenuClick}></i> : null} */}
                 {menu ? 
                 <div className="close-menu" onClick={handleMenuClick}>
                     <div className="line1"></div>
@@ -57,8 +57,8 @@ export default function Navbar() {
                 <Link 
                     to="about" 
                     smooth={true} 
-                    offset={-49} 
-                    duration={800} 
+                    offset={-47} 
+                    duration={1200} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
                     onClick={menu ? handleMenuClick : null}
@@ -70,8 +70,8 @@ export default function Navbar() {
                 <Link 
                     to="media" 
                     smooth={true} 
-                    offset={-49} 
-                    duration={800} 
+                    offset={-47} 
+                    duration={1200} 
                     className={scroll && !menu ? 'media-to-left' : 'media-to-middle'} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
@@ -84,8 +84,8 @@ export default function Navbar() {
                 <Link 
                     to="quartet" 
                     smooth={true} 
-                    offset={-49} 
-                    duration={800} 
+                    offset={-47} 
+                    duration={1200} 
                     className={scroll && !menu ? 'quartet-to-right' : 'quartet-to-middle'} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
@@ -98,8 +98,8 @@ export default function Navbar() {
                 <Link 
                     to="footer" 
                     smooth={true} 
-                    offset={-49} 
-                    duration={800} 
+                    offset={-47} 
+                    duration={1200} 
                     activeClass={menu ? 'nav-links-menu-active' : 'nav-links-active'}
                     spy={true}
                     onClick={menu ? handleMenuClick : null}
@@ -115,8 +115,8 @@ export default function Navbar() {
                         <Link   
                             to="home"     
                             smooth={true}   
-                            offset={-49}  
-                            duration={800}  
+                            offset={-47}  
+                            duration={1200}  
                             spy={true}
                         >
                             Timothy Anderson
@@ -125,10 +125,13 @@ export default function Navbar() {
                     <h2 className={scroll ? 'title serif title-after' : 'title serif title-before'}>Trombonist | Teacher</h2>
             </div>
             <div className="right-links">
-                <div onClick={handleCartToggle} className="bag-container">
-                    <p className="cart-number">{cartLength}</p>
-                    <img src={bag} width="30px" height="30px" alt="shopping bag" />
-                </div>
+                <CartLink to="/cart">
+                    <div onClick={handleCartToggle} className="bag-container">
+                        <p className="cart-number">{commerceCart.total_items}</p>
+                        {/* <p className="cart-number">{cartLength}</p> */}
+                        <img src={bag} width="30px" height="30px" alt="shopping bag" />
+                    </div>
+                </CartLink>
                 {
                     menu ?
                         <div className="menu" onClick={handleMenuClick}>

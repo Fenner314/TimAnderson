@@ -7,6 +7,13 @@
     padding: 80px 30px 20px;
 }
 
+.parallax-image {
+    background-image: url(../img/TimSitting.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .parallax-outer {
     background: black;
 }

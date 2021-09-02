@@ -22,59 +22,61 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function CartItem({ item, cart }) {
+export default function CartItem({ item, cart,}) {
     const classes = useStyles();
 
-    const {
-        id, 
-        name, 
-        img, 
-        price, 
-        total, 
-        count
-    } = item;
+    // const {
+    //     id, 
+    //     name, 
+    //     img, 
+    //     price, 
+    //     total, 
+    //     count
+    // } = item;
 
     const { 
         increment, 
         decrement, 
-        removeItem 
+        removeItem,
+        handleUpdateCartQuantity,
+        handleRemoveFromCart
     } = useContext(ProductContext);
     
     return (
         <div className="row my-4 text-center">
             <div className="col-10 my-1 mx-auto col-lg-2">
                 <img 
-                src={img} 
+                src={item.media.source} 
                 style={{width: '7rem'}} 
                 className="img-fluid" 
                 alt="product" />
             </div>
             <div className="col-10 my-1 mx-auto col-lg-2 d-flex justify-content-center align-items-center">
                 <span className="d-lg-none">Item:&nbsp;</span>
-                {name}
+                {item.name}
             </div>
             <div className="col-10 my-1 mx-auto col-lg-2 d-flex justify-content-center align-items-center">
                 <span className="d-lg-none">Price:&nbsp;</span>
-                ${price}
+                ${item.price.formatted}
             </div>
             <div className="col-10 my-1 mx-auto col-lg-2 d-flex justify-content-center align-items-center">
                 <div className="d-flex justify-content-center">
                     <div className="quantity-ctrl">
                     <ButtonGroup size="small" className={classes.stepper}>
-                        <Button disabled={count <= 1} className={classes.stepperBox} onClick={() => decrement(id)} >-</Button>
-                        <Button disabled className={classes.stepperBox}>{count}</Button>
-                        <Button className={classes.stepperBox} onClick={() => increment(id)} >+</Button>
+                        <Button disabled={item.quantity <= 1} className={classes.stepperBox} onClick={() => handleUpdateCartQuantity(item.id, item.quantity - 1)} >-</Button>
+                        <Button disabled className={classes.stepperBox}>{item.quantity}</Button>
+                        <Button className={classes.stepperBox} onClick={() => handleUpdateCartQuantity(item.id, item.quantity + 1)} >+</Button>
                     </ButtonGroup>
                     </div>
                 </div>
             </div>
             <div className="col-10 my-1 mx-auto col-lg-2 d-flex justify-content-center align-items-center">
-                <div className="cart-icon" onClick={() => removeItem(id)}>
+                <div className="cart-icon" onClick={() => handleRemoveFromCart(item.id)}>
                     <i className="fas fa-trash fa-lg" />
                 </div>
             </div>
             <div className="col-10 my-1 mx-auto col-lg-2 d-flex justify-content-center align-items-center">
-                <strong>Item Total: ${total}</strong>
+                <strong>${item.line_total.formatted}</strong>
             </div>
         </div>
     )

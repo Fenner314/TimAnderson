@@ -1,29 +1,39 @@
 import React, { useContext } from 'react';
+import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { ProductContext } from '../App';
 import CartColumns from './CartColumns';
 import CartList from './CartList';
 import CartTotals from './CartTotals';
 import EmptyCart from './EmptyCart';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import useStyles from '../CheckoutFlow/Checkout/styles';
 
 export default function Cart(props) { 
-    const { cart, cartOpen, handleCartToggle } = useContext(ProductContext);
+    const { cart, cartOpen, handleCartToggle, commerceCart } = useContext(ProductContext);
+
+    const classes = useStyles();
     
-    if (cart.length > 0) {
+    if (commerceCart.total_items > 0) {
         return (
-            <div className={cartOpen ? "cart-container" : 'invis'}>
+            <div className={"cart-container"}>
                 <h1 className="cart-title heading serif">Your Cart</h1>
                 <CartColumns />
-                <CartList cart={cart}/>
+                <CartList cart={cart} commerceCart={commerceCart} />
                 <CartTotals cart={cart} history={props.history} />
-                <p className="close-cart" onClick={handleCartToggle}>Back to site</p>
+                <Link to="/">
+                    <p className="close-cart">Back to site</p>
+                </Link>
             </div>
         )
     } 
     return (
-        <div className={cartOpen ? "cart-container" : 'invis cart-container-down'}>
+        <div className="cart-container">
             <EmptyCart />
-            <p className="close-cart" onClick={handleCartToggle}>Back to site</p>
+            <Link to="/">
+                <Button className={classes.buttonBack} variant="outlined">Back to site</Button>
+                {/* <p className="close-cart">Back to site</p> */}
+            </Link>
         </div>
     )
 }

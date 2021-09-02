@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import '../css/app.css';
 import Navbar from "./Navbar";
 import HomeSection from "./HomeSection";
@@ -7,6 +8,8 @@ import MediaSection from "./MediaSection";
 import QuartetSection from "./QuartetSection";
 import Footer from "./Footer";
 import Cart from "./Cart/Cart";
+import Checkout from './CheckoutFlow/Checkout/Checkout';
+import { commerce } from '../lib/commerce';
 
 import { products, details, shipping } from '../utils/data';
 
@@ -18,23 +21,97 @@ function App() {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [cart, setCart] = useState([]);
+  const [commerceCart, setCommerceCart] = useState({});
+  const [order, setOrder] = useState({});
+  const [errorMessage, setErrorMessage] = useState('');
   const [cartLength, setCartLength] = useState(0);
   const [cartSubTotal, setCartSubTotal] = useState(0);
   const [cartTax, setCartTax] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
   const [shippingCost, setShippingCost] = useState(shipping);
   const [loaded, setLoaded] = useState(false);
+  const [items, setItems] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => {   
+    fetchItems();
+    fetchCart();
+  }, []);
+
+  useEffect(() => {   
     setTimeout(()=>{
       setLoaded(true);
-     }, 500)
+    }, 500);
   }, []);
 
   useEffect(() => {
     addTotals();
     setShippingCost(shipping);
   }, [cart]);
+
+  const fetchItems = async() => {
+    const { data } = await commerce.products.list();
+
+    setItems(data);
+  }
+
+  const fetchCart = async() => {
+    const cart = await commerce.cart.retrieve();
+
+    setCommerceCart(cart)
+  }
+
+  const handleAddToCart = async(productId, quantity) => {
+    const { cart } = await commerce.cart.add(productId, quantity);
+
+    setCommerceCart(cart);
+  }
+
+  const handleUpdateCartQuantity = async(productId, quantity) => {
+    const { cart } = await commerce.cart.update(productId, { quantity });
+
+    setCommerceCart(cart)
+  }
+
+  const handleRemoveFromCart = async (productId) => {
+    const { cart } = await commerce.cart.remove(productId);
+
+    setCommerceCart(cart)
+  }
+
+  const handleEmptyCart = async () => {
+    const { cart } = await commerce.cart.empty();
+
+    setCommerceCart(cart)
+  };
+
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+
+    setCommerceCart(newCart);
+  }
+
+  const handleCaptureCheckout = async(checkoutTokenId, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
+
+      setOrder(incomingOrder);
+      refreshCart();
+    } catch (error) {
+      setErrorMessage(error.data.error.message)
+    }
+  }
+
+  const addCartTotal = (subTotal) => {
+    // const tempTax = subTotal * .065;
+    // const tax = parseFloat(tempTax); 
+    const tempTotal = subTotal + shippingCost;
+    // const tempTotal = subTotal + tax + shippingCost;
+    // const total = parseFloat(tempTotal.toFixed(2));
+    
+    // setCartSubTotal(subTotal);
+    // setCartTax(parseFloat(tax.toFixed(2)));
+    setCartTotal(tempTotal.toFixed(2));
+  }
 
   const getItem = (id) => {
     const product = mediaProducts.find(item => item.id === id);
@@ -131,13 +208,14 @@ function App() {
   const addTotals = () => {
     let subTotal = 0;
     cart.map(item => (subTotal += (item.price * item.count)));
-    const tempTax = subTotal * .065;
-    const tax = parseFloat(tempTax); 
-    const tempTotal = subTotal + tax + shippingCost;
+    // const tempTax = subTotal * .065;
+    // const tax = parseFloat(tempTax); 
+    const tempTotal = subTotal + shippingCost;
+    // const tempTotal = subTotal + tax + shippingCost;
     const total = parseFloat(tempTotal.toFixed(2));
     
     setCartSubTotal(subTotal);
-    setCartTax(parseFloat(tax.toFixed(2)));
+    // setCartTax(parseFloat(tax.toFixed(2)));
     setCartTotal(total);
   }
 
@@ -150,6 +228,18 @@ function App() {
     cartSubTotal,
     cartTax,
     cartTotal,
+    //new values for commerce.js
+    items,
+    commerceCart,
+    handleAddToCart,
+    handleUpdateCartQuantity,
+    handleRemoveFromCart,
+    handleEmptyCart,
+    addCartTotal,
+    order,
+    handleCaptureCheckout,
+    errorMessage,
+
     getItem,
     handleDetail,
     handleDetailsToggle,
@@ -168,13 +258,18 @@ function App() {
     <ProductContext.Provider value={productContextValue}>
       <div className={loaded ? "App" : "App preload"}>
         <div className="site-container">
-          <Navbar />
-          <HomeSection />
-          <AboutSection />
-          <MediaSection />
-          <QuartetSection />
-          <Footer />
-          <Cart />
+          <Switch>
+            <Route exact path="/">
+              <Navbar />
+              <HomeSection />
+              <AboutSection />
+              <MediaSection />
+              <QuartetSection />
+              <Footer />
+            </Route>
+            <Route path="/cart" component={Cart} />
+            <Route path="/checkout" component={Checkout} />
+          </Switch>
         </div>
       </div>
     </ProductContext.Provider>

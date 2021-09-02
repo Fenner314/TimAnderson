@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Parallax, Background } from 'react-parallax';
 import FormerStudentLeft from './AboutSection/FormerStudentLeft';
 import FormerStudentRight from './AboutSection/FormerStudentRight';
-import { alessi, TimParallax } from '../utils/data';
+import { alessi, chad, brett, nathan, TimParallax } from '../utils/data';
 import { Link } from 'react-scroll';
 
 export default function QuartetSection() {
@@ -23,6 +23,7 @@ export default function QuartetSection() {
         <div className="section" id="quartet">
             <Parallax bgImage={TimParallax} strength={300} className={'parallax-outer'} contentClassName={'parallax'} bgImageStyle={{opacity: '.5'}}>
                 {renderMobileParallax()}
+            {/* <div className="parallax parallax-image"> */}
             <div className="heading">
                 <h1 className="heading serif">Elysian Trombone Consort</h1>
                 <h4>Timothy Anderson, Brett Shuster, Nathan Siler - tenor trombones</h4>
@@ -46,12 +47,13 @@ export default function QuartetSection() {
                     &nbsp; for more information.
                 </p>
             </div>
+            {/* </div> */}
             </Parallax>
             <div className="musician-container">
                 <h1 className="heading serif">Meet The Players</h1>
                 <FormerStudentLeft 
                     name={'Chad Arnow'} 
-                    pic={alessi} 
+                    pic={chad} 
                     href={'http://www.chadarnow.com/'} 
                     website={'www.chadarnow.com'}
                 >
@@ -59,7 +61,7 @@ export default function QuartetSection() {
                 </FormerStudentLeft>
                 <FormerStudentRight 
                     name={'Brett Shuster'} 
-                    pic={alessi} 
+                    pic={brett} 
                     href="https://louisville.edu/music/faculty-staff/Faculty/brett-shuster" 
                     website={'www.louisville.edu'}
                 >
@@ -67,7 +69,7 @@ export default function QuartetSection() {
                 </FormerStudentRight>
                 <FormerStudentLeft 
                     name={'Nathan Siler'} 
-                    pic={alessi} 
+                    pic={nathan} 
                     href={'https://music.eku.edu/people/siler'} 
                     website={'www.music.eku.edu'}
                 >
