@@ -6,6 +6,62 @@ import { alessi, TimImageBio } from '../../utils/data';
 export default function AboutSection() {
     const url = 'https://www.slidearea.com';
 
+    const renderFormerStudents = () => {
+        return (
+            <div className="musician-container pb-0">
+                <h1 className="heading serif">Former Students</h1>
+                <FormerStudentLeft 
+                    name={'Joseph Alessi'} 
+                    pic={alessi} 
+                    href={url} 
+                    website={'www.slidearea.com'}
+                >
+                    Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard
+                </FormerStudentLeft>
+                <FormerStudentRight 
+                    name={'Joseph Alessi'} 
+                    pic={alessi} 
+                    href={url} 
+                    website={'www.slidearea.com'}
+                >
+                    Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard
+                </FormerStudentRight>
+                <FormerStudentLeft 
+                    name={'Joseph Alessi'} 
+                    pic={alessi} 
+                    href={url} 
+                    website={'www.slidearea.com'}
+                >
+                    Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard
+                </FormerStudentLeft>
+                <FormerStudentRight 
+                    name={'Joseph Alessi'} 
+                    pic={alessi} 
+                    href={url} 
+                    website={'www.slidearea.com'}
+                >
+                    Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard
+                </FormerStudentRight>
+                <FormerStudentLeft 
+                    name={'Joseph Alessi'} 
+                    pic={alessi} 
+                    href={url} 
+                    website={'www.slidearea.com'}
+                >
+                    Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard
+                </FormerStudentLeft>
+                <FormerStudentRight 
+                    name={'Joseph Alessi'} 
+                    pic={alessi} 
+                    href={url} 
+                    website={'www.slidearea.com'}
+                >
+                    Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard
+                </FormerStudentRight>
+            </div>
+        )
+    }
+
     return (
         <div className="about-section section" id="about">
             <div className="bio">
@@ -30,15 +86,7 @@ export default function AboutSection() {
                     Professional appearances include Ohio Music Educator’s Conference, American Trombone Workshop, International Trombone Festival, College Music Society, and the International Women’s Brass Conference.  He has given several recital and masterclass tours and presented at colleges and universities around the country.
                 </p>
             </div>
-            <div className="musician-container pb-0">
-                <h1 className="heading serif">Former Students</h1>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
-            </div>
+            {renderFormerStudents()}
         </div>
     )
 }

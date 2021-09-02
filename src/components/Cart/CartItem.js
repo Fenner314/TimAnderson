@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
-import { ProductContext } from '../App';
+import { AppContext } from '../../utils/context';
 
 const useStyles = makeStyles(theme => ({
     addButton: {
@@ -22,25 +22,13 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function CartItem({ item, cart,}) {
+export default function CartItem({ item, cart }) {
     const classes = useStyles();
 
-    // const {
-    //     id, 
-    //     name, 
-    //     img, 
-    //     price, 
-    //     total, 
-    //     count
-    // } = item;
-
     const { 
-        increment, 
-        decrement, 
-        removeItem,
         handleUpdateCartQuantity,
         handleRemoveFromCart
-    } = useContext(ProductContext);
+    } = useContext(AppContext);
     
     return (
         <div className="row my-4 text-center">

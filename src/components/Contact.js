@@ -43,7 +43,6 @@ export default function Contact() {
                     <textarea className="input" name="message" rows="5" cols="60" resize="false" required />
                     <span className="floating-label">Message</span>
                 </div>
-                {/* <button type="submit">Send</button> */}
                 <Button
                     variant="contained"
                     className={classes.sendButton}

@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button, CssBaseline } from '@material-ui/core';
 import useStyles from './styles';
-import { commerce } from '../../../lib/commerce';
-import AddressForm from '../AddressForm';
-import PaymentForm from '../PaymentForm';
-import { ProductContext } from '../../App';
+import { commerce } from '../../lib/commerce';
+import AddressForm from './AddressForm';
+import PaymentForm from './PaymentForm';
 import { Link, useHistory } from 'react-router-dom';
-// import { useHistory } from 'react-router';
+import { AppContext } from '../../utils/context';
 
 const steps = ['Shipping address', 'Payment details']
 
@@ -15,9 +14,9 @@ export default function Checkout() {
     const [checkoutToken, setCheckoutToken] = useState(null);
     const [shippingData, setShippingData] = useState({});
     const classes = useStyles();
-    const history = useHistory();
+    // const history = useHistory();
 
-    const { commerceCart, order, errorMessage } = useContext(ProductContext);
+    const { commerceCart, order, errorMessage } = useContext(AppContext);
 
     useEffect(() => {
         const generateToken = async() => {

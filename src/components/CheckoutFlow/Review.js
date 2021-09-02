@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Typography, List, ListItem, ListItemText } from '@material-ui/core';
-import { ProductContext } from '../App';
+import { AppContext } from '../../utils/context';
 
 export default function Review({ checkoutToken }) {
-    const { cartTax, cartTotal } = useContext(ProductContext);
+    const { cartTotal } = useContext(AppContext);
 
     return (
         <>

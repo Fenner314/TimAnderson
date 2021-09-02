@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import Product from './Product';
-import { products } from '../utils/data';
-import { ProductContext } from './App';
+import { AppContext } from '../utils/context';
 
 export default function Products() {
-    const { items } = useContext(ProductContext);
+    const { items } = useContext(AppContext);
 
     return (
         <>

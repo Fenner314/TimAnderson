@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import cx from 'classnames';
-import { ProductContext } from './App';
 import { Link as CartLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import bag from '../img/bag.svg'
+import { AppContext } from '../utils/context';
 
 export default function Navbar() {
     const [scroll, setScroll] = useState(false);
@@ -33,7 +33,7 @@ export default function Navbar() {
         setMenuOpen(false);
     }, []);
 
-    const { handleCartToggle, cartLength, commerceCart } = useContext(ProductContext);
+    const { handleCartToggle, commerceCart } = useContext(AppContext);
 
     const handleMenuClick = () => {
         menuOpen ? setMenuOpen(false) : setMenuOpen(true)

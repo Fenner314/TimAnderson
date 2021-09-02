@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
-import { ProductContext } from './App';
+import { AppContext } from '../utils/context';
 
 const useStyles = makeStyles(theme => ({
     addButton: {
@@ -30,7 +30,7 @@ export default function Product({ product }) {
 
     const classes = useStyles();
 
-    const { addToCart, qtyDecrement, qtyIncrement, handleAddToCart, commerceCart } = useContext(ProductContext);
+    const { handleAddToCart, commerceCart } = useContext(AppContext);
 
     useEffect(() => {
         commerceCart.line_items.map((item) => {
@@ -64,16 +64,10 @@ export default function Product({ product }) {
                     <p dangerouslySetInnerHTML={{__html: product.description}} />
                     <div className="add-container">
                         <ButtonGroup size="small" className={classes.stepper}>
-                            {/* <Button disabled={count <= 1 || inCart} className={classes.stepperBox} onClick={() => qtyDecrement(key)} >-</Button>
-                            <Button disabled className={classes.stepperBox}>{count}</Button>
-                            <Button disabled={inCart} className={classes.stepperBox} onClick={() => qtyIncrement(key)} >+</Button> */}
                         </ButtonGroup>
                         <Button variant="contained" size="small" disabled={inCart} className={classes.addButton} onClick={() => {handleToggleButton(); handleAddToCart(product.id, 1)}}>
                             {inCart ? 'Added To Cart' : 'Add To Cart'}
                         </Button>
-                        {/* <Button variant="contained" size="small" disabled={inCart} className={classes.addButton} onClick={() => addToCart(key)}>
-                            {inCart ? 'Added To Cart' : 'Add To Cart'}
-                        </Button> */}
                     </div>
                 </div>
             </div>

@@ -3,13 +3,13 @@ import { Typography, Button, Divider } from '@material-ui/core';
 import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import Review from './Review';
-import useStyles from './Checkout/styles';
-import { ProductContext } from '../App';
+import useStyles from './styles';
+import { AppContext } from '../../utils/context';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 export default function PaymentForm({ checkoutToken, shippingData, backStep, nextStep }) {
-    const { cartTotal, handleCaptureCheckout } = useContext(ProductContext);
+    const { cartTotal, handleCaptureCheckout } = useContext(AppContext);
 
     const classes = useStyles();
 

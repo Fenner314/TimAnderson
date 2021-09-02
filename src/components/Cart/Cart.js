@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import { ProductContext } from '../App';
 import CartColumns from './CartColumns';
 import CartList from './CartList';
 import CartTotals from './CartTotals';
 import EmptyCart from './EmptyCart';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
-import useStyles from '../CheckoutFlow/Checkout/styles';
+import useStyles from '../CheckoutFlow/styles';
+import { AppContext } from '../../utils/context';
 
 export default function Cart(props) { 
-    const { cart, cartOpen, handleCartToggle, commerceCart } = useContext(ProductContext);
+    const { cart, commerceCart } = useContext(AppContext);
+    // const { cart, cartOpen, handleCartToggle, commerceCart } = useContext(ProductContext);
 
     const classes = useStyles();
     
