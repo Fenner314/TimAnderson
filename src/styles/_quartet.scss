@@ -20,6 +20,14 @@
 
 .react-parallax-bgimage {
     bottom: -25%;
+
+    @include responsiveSmall(784px) {
+        left: 70% !important;
+    }
+
+    @include responsiveSmall(574px) {
+        left: 90% !important;
+    }
 }
 
 .react-parallax-background-children {
@@ -39,16 +47,4 @@
     flex-direction: column;
     align-items: center;
     padding: 30px 30px 80px;
-}
-
-@media only screen and (max-width: 784px) {
-    .react-parallax-bgimage {
-        left: 70% !important;
-    }    
-}
-
-@media only screen and (max-width: 574px) {
-    .react-parallax-bgimage {
-        left: 90% !important;
-    }    
 }

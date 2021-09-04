@@ -56,13 +56,15 @@ export default makeStyles((theme) => ({
       }
   },
   buttonBack: {
-      borderColor: 'var(--main-accent)',
-      color: 'var(--main-white)',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      '&:hover': {
-          backgroundColor: 'hsla(105, 65%, 40%, .1)'
-      }
+    position: 'absolute',
+    bottom: '36px',
+    borderColor: 'var(--main-accent)',
+    color: 'var(--main-white)',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    '&:hover': {
+        backgroundColor: 'hsla(105, 65%, 40%, .1)'
+    }
   },
   sendButton: {
     backgroundColor: 'var(--accent-dark)',

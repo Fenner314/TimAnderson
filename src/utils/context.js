@@ -145,15 +145,10 @@ export default function Context(props) {
         
       const addTotals = () => {
         let subTotal = 0;
-        // cart.map(item => (subTotal += (item.price * item.count)));
-        // const tempTax = subTotal * .065;
-        // const tax = parseFloat(tempTax); 
         const tempTotal = subTotal + shippingCost;
-        // const tempTotal = subTotal + tax + shippingCost;
         const total = parseFloat(tempTotal.toFixed(2));
         
         setCartSubTotal(subTotal);
-        // setCartTax(parseFloat(tax.toFixed(2)));
         setCartTotal(total);
     }
 

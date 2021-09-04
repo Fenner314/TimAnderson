@@ -7,7 +7,7 @@ import TimParallax from '../img/TimSitting.jpg';
 import courtoisLogo from '../img/courtoisLogo.png';
 import UCLogo from '../img/CCMLogo.svg';
 
-const UCSite = 'https://ccm.uc.edu/admissions-and-aid/admissions.html';
+const UCSite = 'https://ccm.uc.edu/admissions-and-aid.html';
 const daytonPhilLogo = 'https://daytonperformingarts.org/wp-content/themes/Newspaper-child/parts/header/Dayton_Philharmonic_Logo_042519.svg';
 const daytonPhilSite = 'https://daytonperformingarts.org/';
 const courtoisSite = 'https://www.a-courtois.com/en/artist';

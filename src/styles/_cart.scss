@@ -1,0 +1,31 @@
+.cart-container {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-color: $darkGray;
+
+    .cart-title {
+        padding: 30px;
+        font-weight: lighter;
+    }
+
+    .cart-icon {
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: red;
+        }
+    }
+
+    .text-title {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }    
+
+    .totals-box {
+        @include responsiveSmall(767px) {
+            padding-bottom: 80px;
+        }
+    }
+}

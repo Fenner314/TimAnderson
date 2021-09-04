@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import '../css/app.css';
+import '../styles/styles.css';
 import Navbar from "./Navbar";
 import HomeSection from "./HomeSection";
 import AboutSection from "./AboutSection/AboutSection";

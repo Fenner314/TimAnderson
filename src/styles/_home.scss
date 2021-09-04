@@ -3,17 +3,15 @@
     background-image: linear-gradient(
         rgba(0, 0, 0, .3), 
         rgba(0, 0, 0, .3)
-      ), url(../img/TimWithAltoBW.jpg);
-      background-attachment: fixed;
+    ), url(../img/TimWithAltoBW.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-position: 100% 0%;
     display: flex;
     justify-content: center;
     margin-top: 53px;
-}
 
-@media only screen and (max-width: 575px) {
-    .home-section {
-        min-height: 70vh;
+    @include responsiveSmall(575px) {
+        min-height: 70vh;  
     }
 }

@@ -1,0 +1,45 @@
+@mixin flexCenter($direction: row, $align: initial) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: $align;
+};
+
+@mixin fontSizeChange($from, $to) {
+    from {
+        font-size: $from;
+    }
+    to {
+        font-size: $to;
+    }
+}
+
+@mixin heightChange($from, $to) {
+    from {
+        font-size: $from;
+    }
+    to {
+        font-size: $to;
+    }
+}
+
+@mixin brandChange($topFrom, $fontFrom, $topTo, $fontTo) {
+    from {
+        top: $topFrom;
+        font-size: $fontFrom;
+    }
+    to {
+        top: $topTo;
+        font-size: $fontTo;
+
+    }
+}
+
+@mixin responsiveSmall($breakpoint) {
+    @media only screen and (max-width: $breakpoint) { @content }
+};
+
+@mixin responsiveLarge($breakpoint) {
+    @media only screen and (min-width: $breakpoint) { @content }
+};

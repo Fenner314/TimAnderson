@@ -41,10 +41,7 @@ export default function Navbar() {
 
     return (
         <>
-        <div className={cx(
-            scroll ? 'navbar navbar-after' : 'navbar navbar-before',
-            noTrans ? 'preload' : ''
-        )}>
+        <div className={noTrans ? 'preload navbar' : 'navbar'}>
             <ul className={cx(
                 menu ? "nav-links-menu serif" : "nav-links serif",
                 menu && !menuOpen ? "translate-100" : "translate-0"

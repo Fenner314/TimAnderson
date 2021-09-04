@@ -1,0 +1,90 @@
+.contact-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include responsiveSmall(756px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-message {
+        @include responsiveSmall(756px) {
+            margin-bottom: 30px !important;
+        }
+    }
+
+    .contact-half {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 30px;
+
+        p {
+            max-width: 50ch;
+        }
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .input-container {
+            position: relative;
+
+            input {
+                height: 45px;
+                width: 300px;
+
+                @include responsiveSmall(756px) {
+                    min-width: 250px;
+                    width: 70vw;
+                    max-width: 350px;            
+                }
+            }
+
+            textarea {
+                max-width: 300px;
+                resize: none;
+                padding: 15px 7px !important;
+
+                @include responsiveSmall(756px) {
+                    min-width: 250px;
+                    width: 70vw;
+                    max-width: 350px;            
+                }
+            }    
+            
+            .input {
+                margin-bottom: 10px;
+                border: none;
+                padding: 7px;
+                background-color: $mainWhite;
+                border-radius: 4px;
+        
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+        
+                &:focus ~ .floating-label,
+                &:not(:focus):valid ~ .floating-label {
+                    left: 7px;
+                    top: 3px;
+                    font-size: 11px;
+                    color: $accentDark;        
+                }
+            }  
+            
+            .floating-label {
+                position: absolute;
+                pointer-events: none;
+                left: 7px;
+                top: 12px;
+                transition: 0.2s ease all;
+                color: gray;
+            }
+        }
+    }
+}

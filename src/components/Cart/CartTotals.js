@@ -38,7 +38,7 @@ export default function CartTotals(props) {
     let form = () => <form><input type="hidden" name="name" value="flabbab" /></form>;
 console.log(commerceCart)
     return (
-        <div className="container">
+        <div className="container totals-box">
             <div className="row">
                 <div className="col-10 mt-2 mb-4 ml-sm-5 ml-md-auto col-sm-8 d-flex flex-column align-items-end" style={{width: "160px"}}>
                     <Button 
