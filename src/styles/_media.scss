@@ -11,7 +11,7 @@
     text-align: center;
     left: 0; 
     right: 0; 
-    background-color: var(--main-gray); 
+    background-color: $darkGray; 
     padding: 20px; 
     border-radius: 5px; 
     margin: 20px auto;
@@ -110,4 +110,8 @@
             }                
         }            
     }        
+}
+
+.MuiButton-contained.Mui-disabled {
+    background-color: $accentDark !important;
 }

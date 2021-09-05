@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { InputLabel, Select, MenuItem, Button, Grid, Typography } from '@material-ui/core';
+import React, { useState, useEffect, useContext } from 'react';
+import { InputLabel, Select, MenuItem, Button, Grid, Typography, CircularProgress } from '@material-ui/core';
 import { useForm, FormProvider } from 'react-hook-form';
 import FormInput from './FormInput';
 import { commerce } from '../../lib/commerce';
 import { Link } from 'react-router-dom';
 import useStyles from './styles';
+import { AppContext } from '../../utils/context';
 
 export default function AddressForm({ checkoutToken, next }) {
     const [shippingCountries, setShippingCountries] = useState([]);
@@ -13,6 +14,8 @@ export default function AddressForm({ checkoutToken, next }) {
     const [shippingSubdivision, setShippingSubdivision] = useState('');
     const [shippingOptions, setShippingOptions] = useState([]);
     const [shippingOption, setShippingOption] = useState('');
+
+    const { order } = useContext(AppContext);
 
     useEffect(() => {
         fetchShippingCountries(checkoutToken.id)
@@ -105,5 +108,5 @@ export default function AddressForm({ checkoutToken, next }) {
                 </form>
             </FormProvider>
         </>
-    )
+    );
 }

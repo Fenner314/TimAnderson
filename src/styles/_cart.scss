@@ -29,3 +29,8 @@
         }
     }
 }
+
+.MuiStepIcon-root.MuiStepIcon-active,
+.MuiStepIcon-root.MuiStepIcon-completed {
+    color: var(--accent-dark) !important;
+}

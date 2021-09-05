@@ -73,5 +73,14 @@ export default makeStyles((theme) => ({
         backgroundColor: 'var(--accent-darker)',
         color: 'var(--main-white)',
     }
-},
+  },
+  thanksButton: {
+    borderColor: 'var(--main-accent)',
+    color: 'var(--main-white)',
+    padding: '15px',
+    fontSize: '20px',
+    '&:hover': {
+      backgroundColor: 'hsla(105, 65%, 40%, .1)'
+    }
+  }
 }));

@@ -15,7 +15,7 @@ export default function Contact() {
                 <input type="hidden" name="_subject" value="New message from website." />
                 <input type="text" name="_honey" style={{display: "none"}} />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="" />
+                <input type="hidden" name="_next" value="https://www.timothyandersontrombone.com/thanks" />
                 <div className="input-container">
                     <input className="input" type="text" name="name" required />
                     <span className="floating-label">Name</span>

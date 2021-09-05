@@ -9,6 +9,7 @@ import QuartetSection from "./QuartetSection";
 import Footer from "./Footer";
 import Cart from "./Cart/Cart";
 import Checkout from './CheckoutFlow/Checkout';
+import Thanks from './Thanks';
 import { AppContext } from '../utils/context';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             </Route>
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />
+            <Route path="/thanks" component={Thanks} />
           </Switch>
         </div>
       </div>
