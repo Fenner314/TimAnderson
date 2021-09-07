@@ -47,7 +47,8 @@
             textarea {
                 max-width: 300px;
                 resize: none;
-                padding: 15px 7px !important;
+                padding: 18px 7px !important;
+                font-family: 'Lato', sans-serif;
 
                 @include responsiveSmall(756px) {
                     min-width: 250px;
@@ -59,7 +60,7 @@
             .input {
                 margin-bottom: 10px;
                 border: none;
-                padding: 7px;
+                padding: 14px 7px 7px;
                 background-color: $mainWhite;
                 border-radius: 4px;
         
