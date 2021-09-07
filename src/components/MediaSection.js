@@ -41,9 +41,9 @@ export default function MediaSection() {
             <div className="videos-container">
                 <div className="video-item">
                     <YouTube embedId={'vpO0dIwkP44'} width={videoWidth} height={videoHeight} title={'Bodybuilding for Brass Players'} />
-                    <p className="video-desc">here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description </p>
+                    <p className="video-desc">A masterclass I gave on the fundamentals of brass playing.</p>
                 </div>
-                <div className="video-item">
+                {/* <div className="video-item">
                     <YouTube embedId={'vpO0dIwkP44'} width={videoWidth} height={videoHeight} title={'Bodybuilding for Brass Players'} />
                     <p className="video-desc">here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description </p>
                 </div>
@@ -54,7 +54,7 @@ export default function MediaSection() {
                 <div className="video-item">
                     <YouTube embedId={'vpO0dIwkP44'} width={videoWidth} height={videoHeight} title={'Bodybuilding for Brass Players'} />
                     <p className="video-desc">here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description here's a description </p>
-                </div>
+                </div> */}
             </div>
         )
     }

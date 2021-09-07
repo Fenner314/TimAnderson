@@ -33,11 +33,6 @@ export default function AboutSection() {
             <div className="musician-container pb-0">
                 <h1 className="heading serif">Former Students</h1>
                 <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
-                <FormerStudentLeft name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentLeft>
-                <FormerStudentRight name={'Joseph Alessi'} pic={alessi} href={url} website={'www.slidearea.com'}>Principal trombonist in the NY Philharmonic | Professor of trombone at Juliard</FormerStudentRight>
             </div>
         </div>
     )
