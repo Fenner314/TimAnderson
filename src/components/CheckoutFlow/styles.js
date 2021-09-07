@@ -77,8 +77,8 @@ export default makeStyles((theme) => ({
   thanksButton: {
     borderColor: 'var(--main-accent)',
     color: 'var(--main-white)',
-    padding: '15px',
-    fontSize: '20px',
+    padding: '10px',
+    fontSize: '18px',
     '&:hover': {
       backgroundColor: 'hsla(105, 65%, 40%, .1)'
     }
