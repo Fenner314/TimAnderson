@@ -13,7 +13,7 @@ export default function Footer() {
             <Contact />
             <div className="social">
                 <a href="https://www.facebook.com/ElysianTromboneConsort" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f fa-lg"></i></a>
-                <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><i className="fab fa-youtube fa-lg"></i></a>
+                <a href="https://www.youtube.com/channel/UCKZ4Sr0zR7J0A0NWuSa2sig/featured" target="_blank" rel="noreferrer"><i className="fab fa-youtube fa-lg"></i></a>
                 <a href="https://open.spotify.com/artist/0XsSyfXpHq6JJE3FkcLRkw?si=7C0wlHftTuG6KR4S7CZ2hg&utm_source=copy-link&dl_branch=1" target="_blank" rel="noreferrer"><i className="fab fa-spotify fa-lg"></i></a>
             </div>
             <p className="copy">Copyright &copy; 2021 Timothy Anderson. Website created by <a className="fenner" href="https://www.fennerstudios.com" target="_blank" rel="noreferrer">Fenner Studios</a>.</p>
