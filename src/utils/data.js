@@ -1,51 +1,70 @@
-import alessi from '../img/alessi.png';
-import chad from '../img/chad.jpg';
-import brett from '../img/brett.jpg';
-import nathan from '../img/nathan.jpg';
-import TimImageBio from '../img/TimLookingRightNarrow.jpg';
-import TimParallax from '../img/TimSitting.jpg';
-import courtoisLogo from '../img/courtoisLogo.png';
-import UCLogo from '../img/CCMLogo.svg';
+import alessi from '../img/alessi.png'
+import jonathanTang from '../img/jonathanHeadshot.jpg'
+import chad from '../img/chad.jpg'
+import brett from '../img/brett.jpg'
+import nathan from '../img/nathan.jpg'
+import TimImageBio from '../img/TimLookingRightNarrow.jpg'
+import TimParallax from '../img/TimSitting.jpg'
+import courtoisLogo from '../img/courtoisLogo.png'
+import UCLogo from '../img/CCMLogo.svg'
 
-const UCSite = 'https://ccm.uc.edu/admissions-and-aid.html';
-const daytonPhilLogo = 'https://daytonperformingarts.org/wp-content/themes/Newspaper-child/parts/header/Dayton_Philharmonic_Logo_042519.svg';
-const daytonPhilSite = 'https://daytonperformingarts.org/';
-const courtoisSite = 'https://www.a-courtois.com/en/artist';
+const UCSite = 'https://ccm.uc.edu/admissions-and-aid.html'
+const daytonPhilLogo =
+	'https://daytonperformingarts.org/wp-content/themes/Newspaper-child/parts/header/Dayton_Philharmonic_Logo_042519.svg'
+const daytonPhilSite = 'https://daytonperformingarts.org/'
+const courtoisSite = 'https://www.a-courtois.com/en/artist'
 
 const details = {
-    id: 1,
-    name: 'Travel\'r',
-    price: 20,
-    img: 'img/travlr.png',
-    desc: 'here\'s the description',
-    inCart: false,
-    count: 0,
-    total: 0
+	id: 1,
+	name: "Travel'r",
+	price: 20,
+	img: 'img/travlr.png',
+	desc: "here's the description",
+	inCart: false,
+	count: 0,
+	total: 0,
 }
 
 const products = [
-    {
-        id: 1,
-        name: 'Travel\'r',
-        price: 25,
-        img: 'img/travlr.png',
-        desc: 'here\'s the description here\'s the description here\'s the description here\'s the description',
-        inCart: false,
-        count: 1,
-        total: 0
-    },
-    {
-        id: 2,
-        name: 'Ex Libris',
-        price: 25,
-        img: 'img/ExLibrisCover.png',
-        desc: 'here\'s the description here\'s the description here\'s the description here\'s the description here\'s the description',
-        inCart: false,
-        count: 1,
-        total: 0
-    },
+	{
+		id: 1,
+		name: "Travel'r",
+		price: 25,
+		img: 'img/travlr.png',
+		desc: "here's the description here's the description here's the description here's the description",
+		inCart: false,
+		count: 1,
+		total: 0,
+	},
+	{
+		id: 2,
+		name: 'Ex Libris',
+		price: 25,
+		img: 'img/ExLibrisCover.png',
+		desc: "here's the description here's the description here's the description here's the description here's the description",
+		inCart: false,
+		count: 1,
+		total: 0,
+	},
 ]
 
-const shipping = 6;
+const shipping = 6
 
-export {alessi, chad, brett, nathan, TimImageBio, TimParallax, UCLogo, UCSite, daytonPhilLogo, daytonPhilSite, courtoisLogo, courtoisSite, details, products, shipping}
+export {
+	alessi,
+	jonathanTang,
+	chad,
+	brett,
+	nathan,
+	TimImageBio,
+	TimParallax,
+	UCLogo,
+	UCSite,
+	daytonPhilLogo,
+	daytonPhilSite,
+	courtoisLogo,
+	courtoisSite,
+	details,
+	products,
+	shipping,
+}

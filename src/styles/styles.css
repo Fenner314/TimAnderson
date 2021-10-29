@@ -465,7 +465,6 @@
   text-align: center;
   left: 0;
   right: 0;
-  background-color: #282a2a;
   padding: 20px;
   border-radius: 5px;
   margin: 20px auto;
@@ -533,7 +532,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* background-image: url(../img/travlr.png); */
+  background-image: url(../img/travlr.png);
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -560,8 +559,8 @@
   padding: 20px;
   -webkit-transform: translateY(73%);
           transform: translateY(73%);
-  -webkit-transition: .5s all ease-in-out;
-  transition: .5s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 @media only screen and (max-width: 500px) {
@@ -572,7 +571,8 @@
   }
 }
 
-.products-container .product-card-container .product-card .card-info h2, .products-container .product-card-container .product-card .card-info p {
+.products-container .product-card-container .product-card .card-info h2,
+.products-container .product-card-container .product-card .card-info p {
   margin-bottom: 12px;
 }
 
