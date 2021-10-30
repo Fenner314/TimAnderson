@@ -12,9 +12,6 @@ const useStyles = makeStyles((theme) => ({
 			backgroundColor: 'var(--accent-darker)',
 			color: 'var(--main-white)',
 		},
-		'@media (max-width: 500px)': {
-			marginTop: '20px',
-		},
 	},
 	stepperBox: {
 		border: '1px solid var(--accent-dark) !important',
@@ -33,11 +30,13 @@ export default function Product({ product }) {
 	const { handleAddToCart, commerceCart } = useContext(AppContext)
 
 	useEffect(() => {
-		commerceCart.line_items.map((item) => {
-			if (item.product_id === product.id) {
-				setInCart(true)
-			}
-		})
+		if (commerceCart) {
+			commerceCart.line_items.map((item) => {
+				if (item.product_id === product.id) {
+					setInCart(true)
+				}
+			})
+		}
 	}, [commerceCart])
 
 	const handleToggleButton = () => {
@@ -54,7 +53,10 @@ export default function Product({ product }) {
 					<div className='card-info'>
 						<h2>{product.name}</h2>
 						<p>${product.price.formatted}</p>
-						<p dangerouslySetInnerHTML={{ __html: product.description }} />
+						<p
+							dangerouslySetInnerHTML={{ __html: product.description }}
+							className='product-desc'
+						/>
 						<div className='add-container'>
 							<ButtonGroup
 								size='small'

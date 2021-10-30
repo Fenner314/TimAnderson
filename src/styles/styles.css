@@ -576,11 +576,15 @@
   margin-bottom: 12px;
 }
 
+.products-container .product-card-container .product-card .card-info .product-desc {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
 .products-container .product-card-container .product-card .card-info .add-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
 }
 
 @media only screen and (max-width: 500px) {

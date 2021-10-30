@@ -99,9 +99,13 @@
 					margin-bottom: 12px;
 				}
 
+				.product-desc {
+					margin-bottom: 0;
+					font-size: 0.75rem;
+				}
+
 				.add-container {
 					display: flex;
-					margin-top: 20px;
 
 					@media only screen and (max-width: 500px) {
 						flex-direction: column;
