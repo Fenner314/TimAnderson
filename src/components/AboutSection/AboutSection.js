@@ -99,14 +99,14 @@ export default function AboutSection() {
 					website={'https://www.katiethigpen.com/'}
 				>
 					Trombonist, United States Army Band "Pershing's Own". Freelance
-					trombonist and educator in the Washington, DC area.
+					trombonist and educator, Washington, D.C.
 				</FormerStudentRight>
 				<FormerStudentLeft
 					name={'Russ Zokaites'}
 					pic={russZokaites}
 					website={'http://www.russzokaites.com/'}
 				>
-					Visiting Assistant Professor of Music - Trombone at Morehead State
+					Visiting Assistant Professor of Music - Trombone, Morehead State
 					University in Kentucky.
 				</FormerStudentLeft>
 				<FormerStudentRight
@@ -114,15 +114,15 @@ export default function AboutSection() {
 					pic={nathan}
 					website={'https://music.eku.edu/people/siler'}
 				>
-					Associate Professor of Trombone at Eastern Kentucky University School
-					of Music. Member of the Elysian Trombone Consort.
+					Associate Professor of Trombone, Eastern Kentucky University School of
+					Music. Member of the Elysian Trombone Consort.
 				</FormerStudentRight>
 				<FormerStudentLeft
 					name={'Louis Setzer'}
 					pic={louisSetzer}
 					website={'https://www.louissetzer.com/'}
 				>
-					Lecturer of Low Brass at Nothern Kentucky University. Author of Solo
+					Lecturer of Low Brass, Nothern Kentucky University. Author of Solo
 					Literature for Trombone and Harp - An Annotated Bibliography.
 				</FormerStudentLeft>
 				<FormerStudentRight
@@ -137,15 +137,15 @@ export default function AboutSection() {
 					pic={jordanJacobson}
 					website={'https://thejordanjacobson.com/post/136718893577'}
 				>
-					Principal Trombone of the Hartford Independent Chamber Orchestra.
-					Alternate trombonist at Goodspeed Opera House.
+					Principal Trombone, Hartford Independent Chamber Orchestra. Alternate
+					trombonist, Goodspeed Opera House.
 				</FormerStudentLeft>
 				<FormerStudentRight
 					name={'Jonathan Tang'}
 					pic={jonathanTang}
 					website={'https://jonathantangmusic.netlify.app'}
 				>
-					Founder of the Cincinnati Brass Academy. Doctoral candidate at the
+					Founder of the Cincinnati Brass Academy. Doctoral candidate,
 					University of North Texas.
 				</FormerStudentRight>
 				<FormerStudentLeft
@@ -153,24 +153,24 @@ export default function AboutSection() {
 					pic={austinMotley}
 					website={'https://www.austinmotley.com/'}
 				>
-					Principal Trombone of the Battle Creek Symphony Orchestra. Second
-					Trombone of the Richmond, IN Symphony Ochestra. Adjunct Trombone
-					Instructor at Wright State University.
+					Principal Trombone, Battle Creek Symphony Orchestra. Second Trombone,
+					Richmond, IN Symphony Ochestra. Adjunct Trombone Instructor, Wright
+					State University.
 				</FormerStudentLeft>
 				<FormerStudentRight
 					name={'Evan Hatter'}
 					pic={evanHatter}
 					website={'https://www.instagram.com/evanhattermusic/'}
 				>
-					Assistant Director of Bands at Thomas More University. Instructor of
-					Trombone at Thomas More University.
+					Assistant Director of Bands, Thomas More University. Instructor of
+					Trombone, Thomas More University.
 				</FormerStudentRight>
 				<FormerStudentLeft
 					name={'Jett Walker'}
 					pic={jettWalker}
 					website={'https://www.jettwalkertrombone.com/'}
 				>
-					Doctoral Candidate, Teaching Assistant at University of Cincinnati,
+					Doctoral Candidate and Teaching Assistant, University of Cincinnati,
 					College-Conservatory of Music.
 				</FormerStudentLeft>
 			</div>

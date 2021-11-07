@@ -154,7 +154,7 @@ export default function AddressForm({ checkoutToken, next }) {
 					<br />
 					<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 						<Button component={Link} to='/cart' variant='outlined'>
-							Back to Cart
+							Go Back
 						</Button>
 						<Button
 							type='submit'
