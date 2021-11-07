@@ -47,7 +47,7 @@ export default function Checkout() {
 		}
 
 		generateToken()
-	}, [commerceCart])
+	}, [commerceCart, checkoutToken])
 
 	const nextStep = () => {
 		setActiveStep((prevActiveStep) => prevActiveStep + 1)

@@ -1,4 +1,13 @@
 import alessi from '../img/alessi.png'
+import willTimmons from '../img/WillTimmons.jpg'
+import katieThigpen from '../img/KatieThigpen.jpg'
+import russZokaites from '../img/RussZokaites.jpg'
+import louisSetzer from '../img/LouisSetzer.jpeg'
+import jacobElkin from '../img/JacobElkin.jpg'
+import jordanJacobson from '../img/JordanJacobson.jpg'
+import austinMotley from '../img/AustinMotley.jpg'
+import evanHatter from '../img/EvanHatter.jpg'
+import jettWalker from '../img/JettWalker.jpg'
 import jonathanTang from '../img/jonathanHeadshot.jpg'
 import chad from '../img/chad.jpg'
 import brett from '../img/brett.jpg'
@@ -53,6 +62,15 @@ const shipping = 6
 export {
 	alessi,
 	jonathanTang,
+	willTimmons,
+	katieThigpen,
+	russZokaites,
+	louisSetzer,
+	jacobElkin,
+	jordanJacobson,
+	austinMotley,
+	evanHatter,
+	jettWalker,
 	chad,
 	brett,
 	nathan,

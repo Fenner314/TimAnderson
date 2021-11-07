@@ -1,18 +1,19 @@
 import React from 'react'
 
 export default function FormerStudentLeft(props) {
-	const { name, pic, href, website } = props
+	const { name, pic, website } = props
 
 	return (
 		<div className='student-container mb-30'>
 			<div className='student'>
-				<h3 className='mb-20'>{name}</h3>
+				{/* <h3 className='mb-20'>{name}</h3> */}
 				<img src={pic} width='175px' alt='artist headshot' />
 			</div>
 			<div className='student-info'>
+				<h3 className='mb-60'>{name}</h3>
 				<span className='mb-30'>{props.children}</span>
 				<a
-					href={href}
+					href={website}
 					target='_blank'
 					rel='noreferrer'
 					className='text-center hyperlink'

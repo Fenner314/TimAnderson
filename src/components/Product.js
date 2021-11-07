@@ -30,7 +30,7 @@ export default function Product({ product }) {
 	const { handleAddToCart, commerceCart } = useContext(AppContext)
 
 	useEffect(() => {
-		if (commerceCart) {
+		if (commerceCart.line_items) {
 			commerceCart.line_items.map((item) => {
 				if (item.product_id === product.id) {
 					setInCart(true)

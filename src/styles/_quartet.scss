@@ -1,50 +1,54 @@
 #quartet {
-    text-align: center;
-    padding: 0;
+	text-align: center;
+	padding: 0;
 }
 
 .parallax {
-    padding: 80px 30px 20px;
+	padding: 80px 30px 20px;
 }
 
 .parallax-image {
-    background-image: url(../img/TimSitting.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+	background-image: url(../img/TimSitting.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .parallax-outer {
-    background: black;
+	background: black;
 }
 
 .react-parallax-bgimage {
-    bottom: -25%;
+	bottom: -25%;
 
-    @include responsiveSmall(784px) {
-        left: 70% !important;
-    }
+	@include responsiveSmall(784px) {
+		left: 70% !important;
+	}
 
-    @include responsiveSmall(574px) {
-        left: 90% !important;
-    }
+	@include responsiveSmall(574px) {
+		left: 90% !important;
+	}
 }
 
 .react-parallax-background-children {
-    left: 130% !important;
+	left: 130% !important;
 }
 
 .quartet-bio {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: start;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: start;
 }
 
 .musician-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 30px 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 30px 80px;
+
+	@include responsiveSmall(444px) {
+		padding: 0;
+	}
 }
