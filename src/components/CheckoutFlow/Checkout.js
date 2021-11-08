@@ -63,38 +63,43 @@ export default function Checkout() {
 		nextStep()
 	}
 
-	let Confirmation = () =>
-		order.customer ? (
-			<>
-				<div>
-					<Typography variant='h5'>
-						Thank you for your purchase, {order.customer.firstname}{' '}
-						{order.customer.lastname}.
-					</Typography>
-					<Divider className={classes.divider} />
-					<Typography variant='subtitle2'>
-						Order ref: {order.customer_reference}
-					</Typography>
+	let Confirmation = () => {
+		if (order.customer) {
+			return (
+				<>
+					<div>
+						<Typography variant='h5'>
+							Thank you for your purchase, {order.customer.firstname}{' '}
+							{order.customer.lastname}.
+						</Typography>
+						<Divider className={classes.divider} />
+						<Typography variant='subtitle2'>
+							Order ref: {order.customer_reference}
+						</Typography>
+					</div>
+					<br />
+					<Button component={Link} to='/' variant='outlined' type='button'>
+						Back to site
+					</Button>
+				</>
+			)
+		} else if (errorMessage) {
+			return (
+				<>
+					<Typography variant='h5'>Error: {errorMessage}</Typography>
+					<br />
+					<Button component={Link} to='/' variant='outlined' type='button'>
+						Back to site
+					</Button>
+				</>
+			)
+		} else {
+			return (
+				<div className={classes.spinner}>
+					<CircularProgress />
 				</div>
-				<br />
-				<Button component={Link} to='/' variant='outlined' type='button'>
-					Back to site
-				</Button>
-			</>
-		) : (
-			<div className={classes.spinner}>
-				<CircularProgress />
-			</div>
-		)
-
-	if (errorMessage) {
-		;<>
-			<Typography variant='h5'>Error: {errorMessage}</Typography>
-			<br />
-			<Button component={Link} to='/' variant='outlined' type='button'>
-				Back to site
-			</Button>
-		</>
+			)
+		}
 	}
 
 	const Form = () =>
