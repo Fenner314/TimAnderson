@@ -57,14 +57,14 @@ export default function CartTotals(props) {
 					>
 						Clear Cart
 					</Button>
-					<h5 className='text-title'>
-						<span>Subtotal:&nbsp;</span>
-						<strong>${commerceCart.subtotal.formatted}</strong>
-					</h5>
 					<h5 className='text-title' style={{ marginBottom: '10px' }}>
 						<span>Total:&nbsp;</span>
-						<strong>${cartTotal}</strong>
+						<strong>${commerceCart.subtotal.formatted}</strong>
 					</h5>
+					{/* <h5 className='text-title' >
+						<span>Total:&nbsp;</span>
+						<strong>${cartTotal}</strong>
+					</h5> */}
 					<Link to='/checkout'>
 						<Button
 							variant='contained'

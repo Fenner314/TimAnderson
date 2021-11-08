@@ -74,8 +74,7 @@ export default function Context(props) {
 	}
 
 	const addCartTotal = (subTotal) => {
-		const tempTotal = subTotal
-		setCartTotal(tempTotal.toFixed(2))
+		setCartTotal(subTotal.toFixed(2))
 	}
 
 	const getItem = (id) => {
