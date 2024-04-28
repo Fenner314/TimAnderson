@@ -16,10 +16,9 @@ import TimImageBio from '../img/TimLookingRightNarrow.jpg'
 import TimParallax from '../img/TimSitting.jpg'
 import courtoisLogo from '../img/courtoisLogo.png'
 import UCLogo from '../img/CCMLogo.svg'
+import daytonPhilLogo from '../img/dayton-performing-arts-alliance-logo-web.svg'
 
 const UCSite = 'https://ccm.uc.edu/admissions-and-aid.html'
-const daytonPhilLogo =
-	'https://daytonperformingarts.org/wp-content/themes/Newspaper-child/parts/header/Dayton_Philharmonic_Logo_042519.svg'
 const daytonPhilSite = 'https://daytonperformingarts.org/'
 const courtoisSite = 'https://www.a-courtois.com/en/artist'
 
@@ -40,7 +39,8 @@ const products = [
 		name: "Travel'r",
 		price: 25,
 		img: 'img/travlr.png',
-		desc: "here's the description here's the description here's the description here's the description",
+		desc:
+			"here's the description here's the description here's the description here's the description",
 		inCart: false,
 		count: 1,
 		total: 0,
@@ -50,7 +50,8 @@ const products = [
 		name: 'Ex Libris',
 		price: 25,
 		img: 'img/ExLibrisCover.png',
-		desc: "here's the description here's the description here's the description here's the description here's the description",
+		desc:
+			"here's the description here's the description here's the description here's the description here's the description",
 		inCart: false,
 		count: 1,
 		total: 0,
